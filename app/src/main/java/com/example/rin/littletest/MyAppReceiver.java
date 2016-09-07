@@ -14,11 +14,9 @@ public class MyAppReceiver extends DefaultIntentReceiver {
             // Enable location updates. These updates will only be registered after the device is registered to Notificare, so this call could also go into the onRegistrationFinished below
             Notificare.shared().enableLocationUpdates();
             //To enable beacons please call the following method
-            Notificare.shared().enableBeacons();
+            Notificare.shared().enableBeacons(60000);
         }
 
-        //To enable in-app billing please invoke the following method
-        Notificare.shared().enableBilling();
     }
 
 
